@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>列表页</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="./css/weui.min.css">
+        <link rel="stylesheet" href="./css/jquery-weui.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="header-bar">
+                <div class="header-bar-box">
+                    <a class="header-icon header-icon-left pull-left back" href="javascript:;"></a>
+                    <h1 class="header-title cell-body color-white">单事项</h1>
+                    <a class="header-icon header-icon-right pull-right header-guide-icon" href="javascript:;"></a>
+                </div>
+            </header>
+            <!-- CONTAINER -->
+            <div class="container">
+
+            <div class="list-container container-bg">
+                <!-- SEARCH -->
+                <div class="weui-search-bar fixed-away-bar" id="searchBar">
+                    <form class="weui-search-bar__form">
+                        <div class="weui-search-bar__box">
+                            <i class="weui-icon-search"></i>
+                            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                        </div>
+                        <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+                            <i class="weui-icon-search"></i>
+                            <span>按事项名称、编号、申办人搜索</span>
+                        </label>
+                    </form>
+                    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+                </div>
+                <!-- SEARCH END-->
+                <div class="weui-tab tab-custom list-tab">
+                    <div class="weui-navbar fixed-away-bar-serach">
+                        <a class="weui-navbar__item fs16 remove-active weui-bar__item--on" href="#tab1">
+                            <p class="notice-num">待领证<!-- <span class="num">11</span> --></p>
+                        </a>
+                        <a class="weui-navbar__item fs16 remove-active" href="#tab2">
+                            
+                            <p>待领退件</p>
+                        </a>
+                        <a class="weui-navbar__item fs16 remove-active" href="#tab3">
+                            
+                            <p>已领证</p>
+                        </a>
+                    </div>
+                    <!-- weui-tab__bd -->
+                    <div class="weui-tab__bd away-bar-serach">
+                        <!-- tab1 -->
+                        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                            <div class="weui-cells mt0">
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊一</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <span class="status stauts-exceed">超过1天</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊二</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊三</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-15</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊一</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <span class="status stauts-exceed">超过1天</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊二</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊三</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-15</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊一</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <span class="status stauts-exceed">超过1天</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊二</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊三</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-15</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊四</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-18</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <span class="status stauts-last">剩余1天</span>
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- tab1 END-->
+                        <!-- tab2-->
+                        <div id="tab2" class="weui-tab__bd-item">
+                            <div class="weui-cells mt0">
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊一</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <span class="status stauts-exceed">超过1天</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊二</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- tab2 END-->
+                        <!-- tab3-->
+                        <div id="tab3" class="weui-tab__bd-item">
+                            <div class="weui-cells mt0">
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊一</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <span class="status status-resubmit">待补交</span>
+                                            <!-- <span  class="status status-return">退回</span> -->
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <span class="status stauts-exceed">超过1天</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="detail.html" class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>专业技术资格评审</p>
+                                        <p class="color-gray fs14">4404040461701170005</p>
+                                        <p class="color-gray fs14">张伊二</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <p class="fs14">03-13</p>
+                                        <p>
+                                            <!-- <span class="status status-resubmit">待补交</span> -->
+                                            <span  class="status status-return">退回</span>
+                                        </p>
+                                        <p>
+                                            <!-- <span class="status stauts-last">剩余1天</span> -->
+                                            <!-- <span class="status stauts-exceed">超过1天</span> -->
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- tab3 END-->
+                    </div>
+                    <!-- weui-tab__bd END-->
+                </div>
+                </div>
+            </div>
+            <!-- CONTAINER END -->
+            <!-- FOOTER NAVE -->
+            <!-- <div class="footer-nav">
+                <a class="cell-body" href="">驳回</a>
+                <a class="cell-body" href="">受理</a>
+            </div> -->
+            <!-- FOOTER NAVE END-->
+
+        </div>
+        <script src="./js/jquery-2.1.4.js"></script>
+        <script src="./js/jquery-weui.min.js"></script>
+    </body>
+</html>
